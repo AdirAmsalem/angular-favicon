@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="siteFavicon : siteFavicon is a simple AngularJS filter that let you easily get the favicon of any website." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>siteFavicon</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/AdirAmsalem/siteFavicon">View on GitHub</a>
+
+          <h1 id="project_title">siteFavicon</h1>
+          <h2 id="project_tagline">siteFavicon is a simple AngularJS filter that let you easily get the favicon of any website.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/AdirAmsalem/siteFavicon/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/AdirAmsalem/siteFavicon/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="sitefavicon" class="anchor" href="#sitefavicon"><span class="octicon octicon-link"></span></a>siteFavicon</h1>
+
+<p>siteFavicon is a simple AngularJS filter that let you easily get the favicon of any website.</p>
+
+<h2>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<p>You can download this by:</p>
+
+<ul>
+<li>Using bower: <code>bower install siteFavicon</code>
+</li>
+<li>Downloading the "siteFavicon.js" file and place it in your scripts folder.</li>
+</ul><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Add the "siteFavicon.js" script to your html file, then you could use this just as you would use any other filter out there.</p>
+
+<h4>
+<a name="in-view-templates-example" class="anchor" href="#in-view-templates-example"><span class="octicon octicon-link"></span></a>In view templates: (<a href="http://AdirAmsalem.github.io/siteFavicon/examples/view-template.html">Example</a>)</h4>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s2">"myApp"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"siteFavicon"</span><span class="p">]);</span>
+</pre></div>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;img</span> <span class="na">ng-src=</span><span class="s">"{{'github.com' | siteFavicon}}"</span> <span class="na">alt=</span><span class="s">"GitHub"</span><span class="nt">&gt;</span>
+</pre></div>
+
+<h4>
+<a name="in-controllersservices-using-filter-example" class="anchor" href="#in-controllersservices-using-filter-example"><span class="octicon octicon-link"></span></a>In controllers/services using "$filter": (<a href="http://AdirAmsalem.github.io/siteFavicon/examples/filter.html">Example</a>)</h4>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s2">"myApp"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"siteFavicon"</span><span class="p">]);</span>
+
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s2">"MainCtrl"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"$scope"</span><span class="p">,</span> <span class="s2">"$filter"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$filter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$scope</span><span class="p">.</span><span class="nx">githubFavicon</span> <span class="o">=</span> <span class="nx">$filter</span><span class="p">(</span><span class="s2">"siteFavicon"</span><span class="p">)(</span><span class="s2">"github.com"</span><span class="p">);</span>
+<span class="p">}]);</span>
+</pre></div>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;img</span> <span class="na">ng-src=</span><span class="s">"{{githubFavicon}}"</span> <span class="na">alt=</span><span class="s">"GitHub"</span><span class="nt">&gt;</span>
+</pre></div>
+
+<h4>
+<a name="in-controllersservices-using-filterfactory-example" class="anchor" href="#in-controllersservices-using-filterfactory-example"><span class="octicon octicon-link"></span></a>In controllers/services using "filterFactory": (<a href="http://AdirAmsalem.github.io/siteFavicon/examples/filter-factory.html">Example</a>)</h4>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s2">"myApp"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"siteFavicon"</span><span class="p">]);</span>
+
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">service</span><span class="p">(</span><span class="s2">"myService"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"siteFaviconFilter"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">siteFaviconFilter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// code...</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="c1">// code...</span>
+        <span class="nx">getSiteFavicon</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">siteFaviconFilter</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}]);</span>
+
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s2">"MainCtrl"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"$scope"</span><span class="p">,</span> <span class="s2">"myService"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">myService</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$scope</span><span class="p">.</span><span class="nx">githubFavicon</span> <span class="o">=</span> <span class="nx">myService</span><span class="p">.</span><span class="nx">getSiteFavicon</span><span class="p">(</span><span class="s2">"github.com"</span><span class="p">);</span>
+<span class="p">}]);</span>
+</pre></div>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;img</span> <span class="na">ng-src=</span><span class="s">"{{githubFavicon}}"</span> <span class="na">alt=</span><span class="s">"GitHub"</span><span class="nt">&gt;</span>
+</pre></div>
+
+<h3>
+<a name="enjoy" class="anchor" href="#enjoy"><span class="octicon octicon-link"></span></a>Enjoy!</h3>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">siteFavicon maintained by <a href="https://github.com/AdirAmsalem">AdirAmsalem</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
