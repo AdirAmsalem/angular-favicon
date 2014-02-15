@@ -6,8 +6,8 @@ siteFavicon is a simple AngularJS filter that let you easily get the favicon of 
 
 You can download this by:
 
-* Using bower: `bower install sitefavicon`
-* Downloading the file "siteFavicon.js" and place it in your scripts folder.
+* Using bower: `bower install siteFavicon`
+* Downloading the "siteFavicon.js" file and place it in your scripts folder.
 
 ## Usage
 
