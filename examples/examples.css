@@ -1,0 +1,34 @@
+.websites {
+	margin: 20px;
+}
+
+.websites h2 {
+	margin: 10px 0;
+}
+
+.website-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+.website-list-item {
+	margin: 7px 0;
+}
+
+.website-list-item a {
+	text-decoration: none;
+	color: blue;
+}
+
+.website-list-item a:hover {
+	color: navy;
+}
+
+.website-list-item-image {
+	margin-right: 3px;
+}
+
+.website-list-item-name {
+	vertical-align: text-bottom;
+}

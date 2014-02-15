@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>siteFavicon - View template example</title>
+	<link rel="stylesheet" href="examples.css">
+</head>
+<body ng-app="myApp" ng-controller="MainCtrl">
+
+	<div class="websites">
+		<h2>Featured websites:</h2>
+		<ul class="website-list">
+			<li class="website-list-item" ng-repeat="website in websites">
+				<a href="{{website.url}}">
+					<img class="website-list-item-image" ng-src="{{website.url | siteFavicon}}" alt="{{website.name}}">
+					<span class="website-list-item-name" ng-bind="website.name"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+	<script src="siteFavicon.js"></script>
+
+	<script>
+		var myApp = angular.module("myApp", ["siteFavicon"]);
+
+		myApp.controller("MainCtrl", ["$scope", function($scope) {
+
+			$scope.websites = [
+				{
+					name: "Google",
+					url: "http://www.google.com"
+				},
+				{
+					name: "Github",
+					url: "https://github.com"
+				},
+				{
+					name: "Microsoft",
+					url: "http://www.microsoft.com"
+				}
+			];
+		}]);
+	</script>
+</body>
+</html>
