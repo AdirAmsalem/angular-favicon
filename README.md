@@ -1,6 +1,6 @@
 # siteFavicon
 
-siteFavicon is a simple AngularJS filter that let you easily get the favicon of any website.
+[siteFavicon](http://AdirAmsalem.github.io/siteFavicon) is a simple AngularJS filter that let you easily get the favicon of any website.
 
 ## Download
 
@@ -11,10 +11,9 @@ You can download this by:
 
 ## Usage
 
-You can use this just as you would use any other filter out there.
+Add the "siteFavicon.js" script to your html file, then you could use this just as you would use any other filter out there.
 
-#### In view templates:
-
+#### In view templates: ([Example](http://AdirAmsalem.github.io/siteFavicon/examples/view-template.html))
 ````js
 var myApp = angular.module("myApp", ["siteFavicon"]);
 ````
@@ -22,8 +21,7 @@ var myApp = angular.module("myApp", ["siteFavicon"]);
 <img ng-src="{{'github.com' | siteFavicon}}" alt="GitHub">
 ````
 
-#### In controllers/services using "$filter":
-
+#### In controllers/services using "$filter": ([Example](http://AdirAmsalem.github.io/siteFavicon/examples/filter.html))
 ````js
 var myApp = angular.module("myApp", ["siteFavicon"]);
 
@@ -35,7 +33,7 @@ myApp.factory("MainCtrl", ["$scope", "$filter", function($scope, $filter) {
 <img ng-src="{{githubFavicon}}" alt="GitHub">
 ````
 
-#### In controllers/services using "filterFactory":
+#### In controllers/services using "filterFactory": ([Example](http://AdirAmsalem.github.io/siteFavicon/examples/filter-factory.html))
 
 ````js
 var myApp = angular.module("myApp", ["siteFavicon"]);
