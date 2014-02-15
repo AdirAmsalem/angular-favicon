@@ -11,7 +11,7 @@ You can download this by:
 
 ## Usage
 
-You can use it just as you would use any other filter out there.
+You can use this just as you would use any other filter out there.
 
 #### In view templates:
 
