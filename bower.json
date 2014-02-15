@@ -1,0 +1,21 @@
+{
+  "name": "siteFavicon",
+  "version": "0.1.0",
+  "main": "siteFavicon.js",
+  "description": "siteFavicon is a simple AngularJS filter that let you easily get the favicon of any website",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AdirAmsalem/siteFavicon.git"
+  },
+  "dependencies": {
+    "angular": "*"
+  },
+  "keywords": [
+    "angular",
+    "favicon"
+  ],
+  "authors": [
+    "Adir Amsalem <adiramsalem@hotmail.com>"
+  ],
+  "license": "MIT"
+}
