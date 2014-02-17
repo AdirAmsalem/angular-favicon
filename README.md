@@ -25,7 +25,7 @@ var myApp = angular.module("myApp", ["siteFavicon"]);
 ````js
 var myApp = angular.module("myApp", ["siteFavicon"]);
 
-myApp.factory("MainCtrl", ["$scope", "$filter", function($scope, $filter) {
+myApp.controller("MainCtrl", ["$scope", "$filter", function($scope, $filter) {
 	$scope.githubFavicon = $filter("siteFavicon")("github.com");
 }]);
 ````
