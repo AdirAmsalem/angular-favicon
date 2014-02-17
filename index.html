@@ -64,7 +64,7 @@
 
 <div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s2">"myApp"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"siteFavicon"</span><span class="p">]);</span>
 
-<span class="nx">myApp</span><span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s2">"MainCtrl"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"$scope"</span><span class="p">,</span> <span class="s2">"$filter"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$filter</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s2">"MainCtrl"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"$scope"</span><span class="p">,</span> <span class="s2">"$filter"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$filter</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">$scope</span><span class="p">.</span><span class="nx">githubFavicon</span> <span class="o">=</span> <span class="nx">$filter</span><span class="p">(</span><span class="s2">"siteFavicon"</span><span class="p">)(</span><span class="s2">"github.com"</span><span class="p">);</span>
 <span class="p">}]);</span>
 </pre></div>
