@@ -38,7 +38,7 @@ myApp.controller("MainCtrl", ["$scope", "$filter", function($scope, $filter) {
 ````js
 var myApp = angular.module("myApp", ["siteFavicon"]);
 
-myApp.service("myService", ["siteFaviconFilter", function(siteFaviconFilter) {
+myApp.factory("myService", ["siteFaviconFilter", function(siteFaviconFilter) {
 	// code...
 
 	return {
