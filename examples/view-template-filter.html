@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>angular-favicon - filterFactory example</title>
+	<title>angular-favicon - View template filter example</title>
 	<link rel="stylesheet" href="examples.css">
 </head>
 <body ng-app="myApp" ng-controller="MainCtrl">
@@ -12,7 +12,7 @@
 		<ul class="website-list">
 			<li class="website-list-item" ng-repeat="website in websites">
 				<a href="{{website.url}}">
-					<img class="website-list-item-image" ng-src="{{website.favicon}}" alt="{{website.name}}">
+					<img class="website-list-item-image" ng-src="{{website.url | favicon}}" alt="{{website.name}}">
 					<span class="website-list-item-name" ng-bind="website.name"></span>
 				</a>
 			</li>
@@ -25,7 +25,7 @@
 	<script>
 		var myApp = angular.module("myApp", ["favicon"]);
 
-		myApp.controller("MainCtrl", ["$scope", "faviconFilter", function($scope, faviconFilter) {
+		myApp.controller("MainCtrl", ["$scope", function($scope) {
 
 			$scope.websites = [
 				{
@@ -41,10 +41,6 @@
 					url: "http://www.microsoft.com"
 				}
 			];
-
-			$scope.websites.forEach( function(website) {
-				website.favicon = faviconFilter(website.url);
-			});
 		}]);
 	</script>
 </body>
