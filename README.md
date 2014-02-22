@@ -25,6 +25,13 @@ var myApp = angular.module("myApp", ["favicon"]);
 #### In view templates using a directive: ([Example](http://AdirAmsalem.github.io/angular-favicon/examples/view-template-directive.html))
 ````js
 var myApp = angular.module("myApp", ["favicon"]);
+
+myApp.controller("MainCtrl", ["$scope", function($scope) {
+	$scope.github = {
+		name: "GitHub",
+		url: "http://github.com"
+	};
+}]);
 ````
 ````html
 <favicon url="{{github.url}}" description="{{github.name}}"></favicon>
