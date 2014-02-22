@@ -34,10 +34,10 @@ myApp.controller("MainCtrl", ["$scope", function($scope) {
 }]);
 ````
 ````html
-<favicon url="{{github.url}}" description="{{github.name}}"></favicon>
+<favicon url="github.url" description="github.name"></favicon>
 <favicon url="'http://github.com'" description="'GitHub'"></favicon>
 
-<img favicon url="{{github.url}}" description="{{github.name}}">
+<img favicon url="github.url" description="github.name">
 <img favicon url="'http://github.com'" description="'GitHub'">
 ````
 
