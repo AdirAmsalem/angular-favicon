@@ -1,4 +1,4 @@
-# favicon
+# angular-favicon
 
 [angular-favicon](http://AdirAmsalem.github.io/angular-favicon) angular-favicon is an AngularJS module that let you easily get and display the favicon of any website.
 
@@ -13,7 +13,7 @@ You can download this by:
 
 Add the "angular-favicon.js" script to your html file, then you could use this just as you would use any other filter out there.
 
-#### In view templates using a filter: ([Example](http://AdirAmsalem.github.io/favicon/examples/view-template-filter.html))
+#### In view templates using a filter: ([Example](http://AdirAmsalem.github.io/angular-favicon/examples/view-template-filter.html))
 ````js
 var myApp = angular.module("myApp", ["favicon"]);
 ````
@@ -22,7 +22,7 @@ var myApp = angular.module("myApp", ["favicon"]);
 <img ng-src="{{'github.com' | favicon}}" alt="GitHub">
 ````
 
-#### In view templates using a directive: ([Example](http://AdirAmsalem.github.io/favicon/examples/view-template-directive.html))
+#### In view templates using a directive: ([Example](http://AdirAmsalem.github.io/angular-favicon/examples/view-template-directive.html))
 ````js
 var myApp = angular.module("myApp", ["favicon"]);
 ````
@@ -34,7 +34,7 @@ var myApp = angular.module("myApp", ["favicon"]);
 <img favicon url="'http://github.com'" description="'GitHub'">
 ````
 
-#### In controllers/services using "$filter": ([Example](http://AdirAmsalem.github.io/favicon/examples/filter.html))
+#### In controllers/services using "$filter": ([Example](http://AdirAmsalem.github.io/angular-favicon/examples/filter.html))
 ````js
 var myApp = angular.module("myApp", ["favicon"]);
 
@@ -46,7 +46,7 @@ myApp.controller("MainCtrl", ["$scope", "$filter", function($scope, $filter) {
 <img ng-src="{{githubFaviconUrl}}" alt="GitHub">
 ````
 
-#### In controllers/services using "filterFactory": ([Example](http://AdirAmsalem.github.io/favicon/examples/filter-factory.html))
+#### In controllers/services using "filterFactory": ([Example](http://AdirAmsalem.github.io/angular-favicon/examples/filter-factory.html))
 
 ````js
 var myApp = angular.module("myApp", ["favicon"]);
