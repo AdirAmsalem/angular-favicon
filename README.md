@@ -1,6 +1,6 @@
 # angular-favicon
 
-[angular-favicon](http://AdirAmsalem.github.io/angular-favicon) angular-favicon is an AngularJS module that let you easily get and display the favicon of any website.
+[angular-favicon](http://AdirAmsalem.github.io/angular-favicon) is an AngularJS module that let you easily get and display the favicon of any website.
 
 ## Download
 
