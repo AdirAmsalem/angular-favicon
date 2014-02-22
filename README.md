@@ -16,10 +16,14 @@ Add the "angular-favicon.js" script to your html file, then you could use this j
 #### In view templates using a filter: ([Example](http://AdirAmsalem.github.io/angular-favicon/examples/view-template-filter.html))
 ````js
 var myApp = angular.module("myApp", ["favicon"]);
+
+myApp.controller("MainCtrl", ["$scope", function($scope) {
+	$scope.githubUrl = "http://github.com";
+}]);
 ````
 ````html
 <img ng-src="{{githubUrl | favicon}}" alt="GitHub">
-<img ng-src="{{'github.com' | favicon}}" alt="GitHub">
+<img ng-src="{{'http://github.com' | favicon}}" alt="GitHub">
 ````
 
 #### In view templates using a directive: ([Example](http://AdirAmsalem.github.io/angular-favicon/examples/view-template-directive.html))
@@ -46,7 +50,7 @@ myApp.controller("MainCtrl", ["$scope", function($scope) {
 var myApp = angular.module("myApp", ["favicon"]);
 
 myApp.controller("MainCtrl", ["$scope", "$filter", function($scope, $filter) {
-	$scope.githubFaviconUrl = $filter("favicon")("github.com");
+	$scope.githubFaviconUrl = $filter("favicon")("http://github.com");
 }]);
 ````
 ````html
@@ -70,7 +74,7 @@ myApp.factory("myService", ["faviconFilter", function(faviconFilter) {
 }]);
 
 myApp.controller("MainCtrl", ["$scope", "myService", function($scope, myService) {
-	$scope.githubFaviconUrl = myService.getFavicon("github.com");
+	$scope.githubFaviconUrl = myService.getFavicon("http://github.com");
 }]);
 ````
 ````html
