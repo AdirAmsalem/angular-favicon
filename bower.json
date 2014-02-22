@@ -1,11 +1,11 @@
 {
-  "name": "siteFavicon",
-  "version": "0.2.0",
-  "main": "siteFavicon.js",
-  "description": "siteFavicon is a simple AngularJS filter that let you easily get the favicon of any website",
+  "name": "angular-favicon",
+  "version": "0.3.0",
+  "main": "angular-favicon.js",
+  "description": "angular-favicon is an AngularJS module that let you easily get and display the favicon of any website",
   "repository": {
     "type": "git",
-    "url": "git://github.com/AdirAmsalem/siteFavicon.git"
+    "url": "git://github.com/AdirAmsalem/angular-favicon.git"
   },
   "dependencies": {
     "angular": "*"

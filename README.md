@@ -1,60 +1,73 @@
-# siteFavicon
+# favicon
 
-[siteFavicon](http://AdirAmsalem.github.io/siteFavicon) is a simple AngularJS filter that let you easily get the favicon of any website.
+[angular-favicon](http://AdirAmsalem.github.io/angular-favicon) angular-favicon is an AngularJS module that let you easily get and display the favicon of any website.
 
 ## Download
 
 You can download this by:
 
-* Using bower: `bower install siteFavicon`
-* Downloading the "siteFavicon.js" file and place it in your scripts folder.
+* Using bower: `bower install angular-favicon`
+* Download the "angular-favicon.js" file and place it in your scripts folder.
 
 ## Usage
 
-Add the "siteFavicon.js" script to your html file, then you could use this just as you would use any other filter out there.
+Add the "angular-favicon.js" script to your html file, then you could use this just as you would use any other filter out there.
 
-#### In view templates: ([Example](http://AdirAmsalem.github.io/siteFavicon/examples/view-template.html))
+#### In view templates using a filter: ([Example](http://AdirAmsalem.github.io/favicon/examples/view-template-filter.html))
 ````js
-var myApp = angular.module("myApp", ["siteFavicon"]);
+var myApp = angular.module("myApp", ["favicon"]);
 ````
 ````html
-<img ng-src="{{'github.com' | siteFavicon}}" alt="GitHub">
+<img ng-src="{{githubUrl | favicon}}" alt="GitHub">
+<img ng-src="{{'github.com' | favicon}}" alt="GitHub">
 ````
 
-#### In controllers/services using "$filter": ([Example](http://AdirAmsalem.github.io/siteFavicon/examples/filter.html))
+#### In view templates using a directive: ([Example](http://AdirAmsalem.github.io/favicon/examples/view-template-directive.html))
 ````js
-var myApp = angular.module("myApp", ["siteFavicon"]);
+var myApp = angular.module("myApp", ["favicon"]);
+````
+````html
+<favicon url="{{github.url}}" description="{{github.name}}"></favicon>
+<favicon url="'http://github.com'" description="'GitHub'"></favicon>
+
+<img favicon url="{{github.url}}" description="{{github.name}}">
+<img favicon url="'http://github.com'" description="'GitHub'">
+````
+
+#### In controllers/services using "$filter": ([Example](http://AdirAmsalem.github.io/favicon/examples/filter.html))
+````js
+var myApp = angular.module("myApp", ["favicon"]);
 
 myApp.controller("MainCtrl", ["$scope", "$filter", function($scope, $filter) {
-	$scope.githubFavicon = $filter("siteFavicon")("github.com");
+	$scope.githubFaviconUrl = $filter("favicon")("github.com");
 }]);
 ````
 ````html
-<img ng-src="{{githubFavicon}}" alt="GitHub">
+<img ng-src="{{githubFaviconUrl}}" alt="GitHub">
 ````
 
-#### In controllers/services using "filterFactory": ([Example](http://AdirAmsalem.github.io/siteFavicon/examples/filter-factory.html))
+#### In controllers/services using "filterFactory": ([Example](http://AdirAmsalem.github.io/favicon/examples/filter-factory.html))
 
 ````js
-var myApp = angular.module("myApp", ["siteFavicon"]);
+var myApp = angular.module("myApp", ["favicon"]);
 
-myApp.factory("myService", ["siteFaviconFilter", function(siteFaviconFilter) {
+myApp.factory("myService", ["faviconFilter", function(faviconFilter) {
 	// code...
 
 	return {
 		// code...
-		getSiteFavicon: function(url) {
-			return siteFaviconFilter(url);
+		getFavicon: function(url) {
+			return faviconFilter(url);
 		}
 	}
 }]);
 
 myApp.controller("MainCtrl", ["$scope", "myService", function($scope, myService) {
-	$scope.githubFavicon = myService.getSiteFavicon("github.com");
+	$scope.githubFaviconUrl = myService.getFavicon("github.com");
 }]);
 ````
 ````html
-<img ng-src="{{githubFavicon}}" alt="GitHub">
+<img ng-src="{{githubFaviconUrl}}" alt="GitHub">
 ````
 
 ### Enjoy!
