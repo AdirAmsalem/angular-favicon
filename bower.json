@@ -1,6 +1,6 @@
 {
   "name": "angular-favicon",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "angular-favicon.js",
   "description": "angular-favicon is an AngularJS module that let you easily get and display the favicon of any website",
   "repository": {
